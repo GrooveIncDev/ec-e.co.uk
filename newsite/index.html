@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elizabeth Cameron | Equality, Diversity & Inclusion Consultant</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+line-height:1.6;
+color:#333;
+}
+
+/* NAVBAR */
+
+header{
+background:#111;
+color:white;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+margin:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#4db8ff;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+margin-top:80px;
+height:50vh;
+overflow:hidden;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item{
+height:100%;
+}
+
+.carousel{
+position:relative;
+z-index:1;
+}
+
+.carousel-item img{
+width:100%;
+height:55vh;
+object-fit:contain;
+background:black;
+}
+
+/* HERO TEXT */
+
+.hero-text {
+position: absolute;
+top: 80%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: rgba(0,0,0,0.6);
+color: white;
+padding: 20px 35px;
+border-radius: 10px;
+text-align: center;
+z-index: 10;
+}
+
+.hero-text h1{
+margin:0;
+font-size:36px;
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 20px;
+text-align:center;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+p{
+max-width:750px;
+margin:0 auto 20px auto;
+}
+
+/* SECTION COLOURS */
+
+.section-expertise{
+background:#c5f5f7;
+color:#1a1a1a;
+}
+
+.section-light{
+background:#f2f2f2;
+color:#333;
+}
+
+.section-white{
+background:#ffffff;
+color:#333;
+}
+
+.section-dark{
+background:#1c1c1c;
+color:white;
+}
+
+.section-dark h2{
+color:white;
+}
+
+/* SERVICES */
+
+#our-services{
+padding:60px 20px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+margin-top:20px;
+}
+
+.card{
+background:#f4f4f4;
+padding:22px;
+border-radius:10px;
+transition:0.3s ease;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card h3{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:14px;
+margin-bottom:0;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+max-width:900px;
+margin:30px auto 0 auto;
+}
+
+.thumbnail{
+display:block;
+overflow:hidden;
+border-radius:12px;
+}
+
+.thumbnail img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+transition:transform 0.3s ease;
+}
+
+.thumbnail:hover img{
+transform:scale(1.08);
+}
+
+/* CONTACT */
+
+.contact{
+background:#f8f9fb;
+color:#333;
+padding:70px 20px;
+border-top:1px solid #e5e5e5;
+}
+
+.contact::before{
+content:"";
+display:block;
+width:60px;
+height:3px;
+background:#ff8e4d;
+margin:0 auto 25px auto;
+border-radius:5px;
+}
+
+/* FOOTER */
+
+footer{
+background:#1f3a5f;
+color:#ffffff;
+text-align:center;
+padding:50px 20px;
+border-radius:25px 25px 0 0;
+margin-top:60px;
+}
+
+footer h3{
+font-size:24px;
+font-weight:600;
+margin-bottom:25px;
+letter-spacing:0.5px;
+}
+
+footer p{
+font-size:15px;
+opacity:0.9;
+margin-bottom:15px;
+}
+
+footer img{
+height:55px;
+margin-top:10px;
+transition:0.3s ease;
+}
+
+footer img:hover{
+transform:scale(1.08);
+}
+/* PARTNERS */
+
+.partners{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.partners img{
+height:90px;
+object-fit:contain;
+background:rgb(10, 48, 2);
+padding:15px 20px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.08);
+transition:transform 0.3s ease;
+}
+
+.partners img:hover{
+transform:scale(1.08);
+}
+footer img{
+height:60px;
+margin-top:10px;
+}
+/* TESTIMONIALS */
+
+.testimonials{
+background:#ffffff;
+padding:70px 20px;
+}
+
+.testimonial{
+max-width:700px;
+margin:25px auto;
+padding:25px 30px;
+background:#f8f9fb;
+border-left:5px solid #4db8ff;
+border-radius:8px;
+font-style:italic;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.testimonial strong{
+display:block;
+margin-top:12px;
+font-style:normal;
+color:#555;
+}
+/* BOOKING SECTION */
+
+.booking-section{
+background:#a5bad48f;
+padding:80px 20px;
+text-align:center;
+}
+
+.booking-section h2{
+margin-bottom:20px;
+}
+
+.booking-section p{
+max-width:1000px;
+margin:0 auto 40px auto;
+font-size:18px;
+line-height:1.6;
+}
+
+.calendar-container{
+max-width:900px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<div><strong>Elizabeth Cameron</strong></div>
+
+<ul>
+<li><a href="#about-elizabeth">About</a></li>
+<li><a href="#our-services">Services</a></li>
+<li><a href="#expertise">Expertise</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#image-gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<div class="hero">
+
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<img src="images/image1.jpg" class="d-block" alt="">
+</div>
+
+<div class="carousel-item">
+<img src="images/image2.jpg" class="d-block" alt="">
+</div>
+
+<div class="carousel-item">
+<img src="images/image3.jpg" class="d-block" alt="">
+</div>
+
+<div class="carousel-item">
+<img src="images/image4.jpg" class="d-block" alt="">
+</div>
+
+<div class="carousel-item">
+<img src="images/image5.jpg" class="d-block" alt="">
+</div>
+
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+
+<div class="hero-text">
+<h1>Champion for Equality, Diversity & Inclusion</h1>
+</div>
+
+</div>
+
+<section id="about-elizabeth" class="section-white">
+<div class="container">
+
+<h2>About Elizabeth</h2>
+
+<p>
+Elizabeth Cameron is a dynamic change-maker with over 25 years’ experience across Public, Private and Third sectors.
+</p>
+
+<p>
+She co-created the UK Disability Passport and works at strategic levels to foster meaningful culture change, championing equality, diversity and inclusion at every level.
+</p>
+
+</div>
+</section>
+
+<section id="our-services" class="section-light">
+<div class="container">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Equality, Diversity & Inclusion Consultancy</h3>
+<p>Strategic equality and inclusion advisory services.</p>
+</div>
+
+<div class="card">
+<h3>Education & Training</h3>
+<p>Interactive and transformative inclusion sessions.</p>
+</div>
+
+<div class="card">
+<h3>Performance and Cultural Competence Coaching</h3>
+<p>Leadership & cultural competence development.</p>
+</div>
+
+<div class="card">
+<h3>Bespoke Programme Creation</h3>
+<p>Custom-designed programmes built around your organisation’s goals, values and long-term inclusion strategy.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="expertise" class="section-expertise">
+<div class="container">
+
+<h2>Expertise</h2>
+
+<p>
+Racial Equality specialist providing strategic insight on Equality, Diversity, Inclusion, Unconscious Bias and the Equality Act 2010.
+</p>
+
+</div>
+</section>
+
+<section id="experience" class="section-light">
+<div class="container">
+
+<h2>Experience</h2>
+
+<p>
+Having worked across public, private, and third sectors, EC-E Ltd brings a wealth of expertise in participation, engagement, and democracy — shaping strategy for service delivery and commissioning.
+</p>
+
+</div>
+</section>
+
+<section id="partnerships" class="section-white">
+
+<div class="container">
+
+<h2>Partnership</h2>
+
+<div class="partners">
+
+<img src="images/image-auto.jpg" alt="Autotrader">
+<img src="images/image-labour.png" alt="Labour Party">
+<img src="images/image-gmp.png" alt="Greater Manchester Police">
+<img src="images/image-BBC.png" alt="BBC">
+<img src="images/image-COE.png" alt="Church of England">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="working-style" class="section-dark">
+<div class="container">
+
+<h2>Working Style</h2>
+
+<p>
+Elizabeth fosters systems that drive meaningful culture change and engagement at the highest decision-making levels.
+</p>
+
+</div>
+</section>
+<section class="section-white testimonials">
+
+<h2>Testimonials</h2>
+
+<div class="testimonial">
+"This course was outstanding, it was interactive, interesting, and real-life stories brought to life by those who experience it – marvellous.”
+<strong>– SEO’s GMP DEC22</strong>
+</div>
+
+<div class="testimonial">
+"Elizabeth brings something more out of you, she creates a safe place to question, discuss and explore inner thoughts."
+<strong>– BLM, East Mids Labour group 2021</strong>
+</div>
+
+<div class="testimonial">
+"You think you know this stuff but the way unconscious bias was presented left me eager to have deeper conversations.”
+<strong>– Housing Association '23</strong>
+</div>
+
+</section>
+<section id="image-gallery" class="section-light">
+
+<div class="container">
+
+<h2>Image Gallery</h2>
+
+<div class="gallery-grid">
+
+<a href="images/gallery-image1.jpg" class="thumbnail">
+<img src="images/gallery-image1.jpg">
+</a>
+
+<a href="images/gallery-image2.jpg" class="thumbnail">
+<img src="images/gallery-image2.jpg">
+</a>
+
+<a href="images/gallery-image3.jpg" class="thumbnail">
+<img src="images/gallery-image3.jpg">
+</a>
+
+<a href="images/gallery-image4.jpg" class="thumbnail">
+<img src="images/gallery-image4.jpg">
+</a>
+
+<a href="images/gallery-image5.jpg" class="thumbnail">
+<img src="images/gallery-image5.jpg">
+</a>
+
+<a href="images/gallery-image6.jpg" class="thumbnail">
+<img src="images/gallery-image6.jpg">
+</a>
+
+<a href="images/gallery-image7.jpg" class="thumbnail">
+<img src="images/gallery-image7.jpg">
+</a>
+
+<a href="images/gallery-image8.jpg" class="thumbnail">
+<img src="images/gallery-image8.jpg">
+</a>
+
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: elizabeth@ec-e.co.uk</p>
+<p>Phone: +44 (0) 7825 132907</p>
+<section class="booking-section">
+
+<h2>Work With Elizabeth</h2>
+
+<p>
+Elizabeth works with organisations, leaders and teams who are committed to creating more inclusive, thoughtful and equitable environments.  
+If you would like to explore training, consultancy or collaboration opportunities, you are welcome to schedule a conversation below.
+</p>
+
+<p>
+This initial meeting provides an opportunity to discuss your organisation’s goals and how Elizabeth’s work in equality, diversity and inclusion can support meaningful and lasting change.
+</p>
+
+<div class="calendar-container">
+<iframe 
+src="https://calendly.com/YOUR-CALENDLY-LINK" 
+width="100%" 
+height="650" 
+frameborder="0">
+</iframe>
+</div>
+
+</section>
+</section>
+
+<footer>
+
+<h3>© 2025 Elizabeth Cameron | Empowering Inclusion & Equality</h3>
+
+<p>Powered by</p>
+
+<a href="https://www.grooveinc.uk" target="_blank">
+<img src="images/grooveinclogo.png" alt="Groove Inc">
+</a>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
