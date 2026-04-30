@@ -55,6 +55,11 @@ color:white;
 font-weight:bold;
 font-size:16px;
 }
+.logo img {
+  height: 55px;   /* controls size */
+  width: auto;
+  display: block;
+}
 
 /* NAV LINKS */
 nav ul{
@@ -90,11 +95,23 @@ position:relative;
 z-index:1;
 }
 
-.carousel-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  background:black; /* fills empty space nicely */
+.carousel-item img {
+  width: 100%;
+  height: 50vh;
+  object-fit: contain;
+  background: black;
+}
+.hero {
+  position: relative;
+  margin-top: 80px;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
 }
 
 /* HERO TEXT */
@@ -317,7 +334,7 @@ max-width:500px;
 margin:25px auto;
 padding:25px 30px;
 background:#f8f9fb;
-border-left:5px solid #4db8ff;
+border-left:5px solid #4bb6fd;
 border-radius:8px;
 font-style:italic;
 }
@@ -415,7 +432,37 @@ margin:0;
   }
 
 }
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+.sdg img {
+  width: 100%;
+  max-width: 160px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
 
+.sdg:hover {
+  transform: translateY(-5px);
+  border: 2px solid #b8860b;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.sdg p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.sdg {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  transition: 0.3s ease;
+}
 
 </style>
 </head>
