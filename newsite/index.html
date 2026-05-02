@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +40,7 @@
   </nav>
 
 </header>
+<div id="overlay" onclick="toggleMenu()"></div>
 <div class="hero">
 
 <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
@@ -372,7 +374,16 @@ frameborder="0">
 <script>
 function toggleMenu(){
   document.getElementById("nav-links").classList.toggle("active");
+  document.getElementById("overlay").classList.toggle("active");
 }
+
+// ✅ close menu when clicking a link
+document.querySelectorAll("#nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("nav-links").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
+  });
+});
 </script>
 </body>
 </html>
