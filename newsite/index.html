@@ -60,9 +60,6 @@ font-size:16px;
   width: auto;
   display: block;
 }
-.logo{
-    justify-content:center;
-  }
 
 /* NAV LINKS */
 nav ul{
@@ -120,19 +117,27 @@ z-index:1;
 /* HERO TEXT */
 
 .hero-text {
-  position:absolute;
-  top:70%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  width:90%;
-  background:rgba(0,0,0,0.6);
-  padding:15px 20px;
-  border-radius:8px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: auto;
+  max-width: 80%;
+
+  background: none;        /* 👈 remove box */
+  padding: 0;              /* 👈 remove extra space */
+  border-radius: 0;
+
+  z-index: 2;
+  text-align: center;
 }
 
-.hero-text h1{
-margin:0;
-font-size:26px;
+.hero-text h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.8); /* 👈 key */
 }
 
 /* SECTIONS */
@@ -396,6 +401,10 @@ margin:0;
     position:relative;
   }
 
+  .logo{
+    justify-content:center;
+  }
+
   /* SHOW HAMBURGER */
   .menu-toggle{
     display:block;
@@ -472,7 +481,8 @@ margin:0;
   <nav>
 
     <div class="logo">
-    <img src="/images/ec-logo.jpg"></div>
+  <img src="images/ec-logo.jpg" alt="EC Logo">
+    </div>
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
@@ -530,7 +540,7 @@ margin:0;
 </div>
 
 <div class="hero-text">
-<h1>Champion for Equality, Diversity & Inclusion</h1>
+<h1> Champion for Equality, Diversity & Inclusion </h1>
 </div>
 
 </div>
